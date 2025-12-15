@@ -22,7 +22,7 @@ and put the built `target/release/accurate-time` to one of you `$PATH` directori
 You can use the following in your `~/.tmux.conf` to fallback if accurate-time isn't available:
 
 ```
-if-shell "accurate-time tmux" {
+if-shell -b "accurate-time tmux" {
   set -g status-interval 0
 } {
   set -g status-interval 1
